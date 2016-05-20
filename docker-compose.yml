@@ -1,0 +1,14 @@
+version: '2'
+
+services:
+  web:
+    build: .
+    volumes:
+      - ./logs:/var/logs
+      - ./conf:/etc/nginx/conf.d
+    ports:
+      - 8000:80
+  phpserver:
+    image: php:fpm
+    volumes:
+      - ./sites:/var/www/html
