@@ -2,7 +2,7 @@
 Docker configuration for nginx with php5 fpm modular
 
 ##add new site
-check folder **/conf/** and add new config file nginx. Example *mynewsite.pe.conf*
+check folder **/conf/** and add new config file nginx. Example **mynewsite.pe.conf**
 ```
 server {
   server_name          mynewsite.pe;
@@ -21,7 +21,14 @@ server {
 
 }
 ```
-create new folder the project in **/sites/** "/mynewsite.pe/" and add files.
+create new folder the project in **/sites/mynewsite.pe/** and add files.
+
+add virtualhost in hosts **/etc/hosts**
+
+```
+127.0.0.1 mynewsite.pe
+```
+
 
 run docker
 ```
