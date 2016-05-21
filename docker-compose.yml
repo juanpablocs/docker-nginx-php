@@ -5,9 +5,10 @@ services:
     build: .
     volumes:
       - ./logs:/var/logs
+      - ./sites:/var/www/html
       - ./conf:/etc/nginx/conf.d
     ports:
-      - 8000:80
+      - 80:80
   phpserver:
     image: php:fpm
     volumes:
